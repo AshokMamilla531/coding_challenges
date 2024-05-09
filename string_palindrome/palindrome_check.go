@@ -9,7 +9,6 @@ func main() {
 }
 
 func IsPalindrome(input string) bool {
-
 	inputBytes := []byte(input)
 	i := 0
 	j := len(inputBytes) - 1
