@@ -13,7 +13,7 @@ func main() {
 
 func CompressString(input string) string {
 	runes := []rune(input)
-	fmt.Println(runes[0])
+	//fmt.Println(runes[0])
 	var out []string
 	count := 1
 	for i := 0; i < len(runes)-1; i++ {
