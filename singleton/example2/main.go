@@ -20,6 +20,10 @@ func main() {
 
 	router.GET("/users", getUsers)
 
+	router.NoRoute(func(ctx *gin.Context) {
+		ctx.JSON(http.StatusMethodNotAllowed, gin.H{"message": "Method Not Allowed", "source": ctx.ClientIP()})
+	})
+
 	if err := router.Run(":8080"); err != nil {
 		log.Fatal("Failed to run server: ", err)
 	}
